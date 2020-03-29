@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus} from '@fortawesome/free-solid-svg-icons'
 
 const User = (props) => {
-    //console.log(props);
+    console.log(props);
     return (
         <div className="faculty">
             <div className="image">
@@ -18,10 +18,9 @@ const User = (props) => {
                 <p>Website : {props.user2.website}</p>
                 <button 
                     className="btn"
-                    onClick={() => props.handleAddFaculty(props.facultyMember)}
+                    onClick={() => props.handleAddFaculty(props.user2)}
                         > <FontAwesomeIcon icon={faUserPlus}/>  Add Faculty</button>
             </div>
-            
         </div>
     );
 };

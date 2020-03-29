@@ -13,23 +13,23 @@ const Faculty = () => {
     const [facultyMember, setFacultyMember] = useState([]);
 
     const handleAddFaculty = (para) => {
-        const newFaculty = [...facultyMember, para];
+        const newFaculty =[...facultyMember, para];
         setFacultyMember(newFaculty);
-        console.log(setFacultyMember);
+        //console.log(setFacultyMember);
     }
     return (
         <div className="faculty-container">
             <div className="user-container">
                {
                     users.map(us => <User 
-                        handleAddFaculty = {handleAddFaculty}
-                        user2={us}> </User>)
+                       user2={us}
+                       handleAddFaculty={handleAddFaculty}
+                       > </User>)
                }
             </div>
             <div className="state-container">
                 <Summary facultyMember={facultyMember}></Summary>
             </div>
-            
         </div>
     );
 };
